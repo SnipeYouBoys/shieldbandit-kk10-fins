@@ -7,8 +7,8 @@
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
 </head>
 <body>
-  <h1 id="title">Shieldbandit's KK10 Finishes</h1>
-  <h2 id="count">[27/95]</h2>
+  <p id="title">Shieldbandit's KK10 Finishes</p>
+  <p id="count">[27/95]</p>
   <p id="linksheader">Links To Clips:</p>
   
 <div id="linksGrid">
@@ -135,29 +135,26 @@ body{
 
  /* unvisited link */
 a:link {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 /* visited link */
 a:visited {
-  color: rgb(0, 0, 0);
+  color: #ffffff;
 }
 
 /* mouse over link */
 a:hover {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   animation: colorShift 0.5s forwards alternate;
 }
 
-.link {
-    transition: color 0.3s ease-in-out;
-}
 
 
 
 @keyframes colorShift {
-    0%   {border: rgb(0, 0, 0) 2px solid;}
-    100% {border: rgb(255, 255, 255) 2px solid;}
+    0%   {border: #ffffff 2px solid; color: #ffffff;}
+    100% {border: #e6a8ff 2px solid; color: #e6a8ff;}
 }
 
 /* selected link */
@@ -167,10 +164,10 @@ a:active {
 
 .link {
     padding: 1px 6px;
-    border: rgb(0, 0, 0) 2px solid;
+    border: #ffffff 2px solid;
     border-radius: 2px;
     color: #ffffff;
-    background-color: #e6a8ff;
+    background-color: transparent;
     text-decoration: none;
     font-size: 2em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -187,35 +184,89 @@ a:active {
     padding: 5px;
     max-width: 1920px;
     margin: 0 auto;
-}
+    opacity: 0;
+    animation-name: fadeInGrid;
+    animation-duration: 1.0s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeInGrid {
+      to {
+        opacity: 1;
+      }
+    }
 
 #title{
     padding: 0px;
-    margin: 0px;
+    margin: 0px 0px;
     color: #ffffff;
+    width: 90%;
     font-size:6em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
-}
+    opacity: 0;
+    transform: translateY(35px);
+    animation-name: fadeSlideIn;
+    animation-duration: 1.0s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
 
 #count{
-  padding: 0px;  
-    margin: 0.25em 0px;
+    padding: 0px;  
+    margin: 10px 0px;
     color: #ffffff;
-    font-size:4em;
+    width: 25%;
+    font-size:5em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+    opacity: 0;
+    transform: translateX(100px);
+    animation-name: fadeSlideInCount;
+    animation-duration: 1.0s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeSlideInCount {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
 
 #linksheader{
     padding: 0px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     color: #ffffff;
-    font-size:1.5em;
+    font-size:2em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+    opacity: 0;
+    animation-name: fadeInGrid;
+    animation-duration: 1.0s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeInGrid {
+      to {
+        opacity: 1;
+      }
+    }
 
 </style>
 </html>
